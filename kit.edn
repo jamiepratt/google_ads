@@ -1,0 +1,8 @@
+{:full-name "jamiep/google_ads"
+ :ns-name   "jamiep.google-ads"
+ :sanitized "jamiep/google_ads"
+ :name      "google_ads"
+ :modules   {:root         "modules"
+             :repositories [{:url  "https://github.com/kit-clj/modules.git"
+                             :tag  "master"
+                             :name "kit-modules"}]}}
