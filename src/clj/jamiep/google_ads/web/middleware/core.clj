@@ -16,16 +16,6 @@
         ))))
 
 
-(defn wrap-google-oauth2 [_]
+(defn wrap-google-oauth2 [{:keys [oauth2]}]
   (fn [handler]
-    (wrap-oauth2
-     handler
-     {:google
-      {:authorize-uri    "https://accounts.google.com/o/oauth2/auth"
-       :access-token-uri "https://accounts.google.com/o/oauth2/token"
-       :client-id        "957244641744-ikcvq7noulb3fouud2d5mi8kd6godv00.apps.googleusercontent.com"
-       :client-secret    "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"
-       :scopes           ["https://www.googleapis.com/auth/adwords"]
-       :launch-uri       "/oauth2/google"
-       :redirect-uri     "https://oauth2.jamiep.org/oauth2/google/callback"
-       :landing-uri      "/"}})))
+    (wrap-oauth2 handler oauth2)))
